@@ -12,9 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   nameField.addEventListener("keypress", (e) => {
     const allowedPattern = /^[a-zA-Z'\-\s]$/;
-    const char = String.fromCharCode(e.which || e.keyCode);
-    if (!allowedPattern.test(char)) {
-      e.preventDefault();
+    if (!allowedPattern.test(e.key)) {
+    //   e.preventDefault();
       showTemporaryError(nameField, "Illegal character: " + char);
       addError("name", `User typed an illegal character: '${char}'`);
     }
@@ -54,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     formErrorsField.value = JSON.stringify(form_errors);
 
-    infoMessage.textContent = "Form is valid! Submitting...";
+    infoMessage.textContent = "Submitting...";
   });
 
   function buildCustomValidationMessages() {
