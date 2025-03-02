@@ -293,6 +293,17 @@ input:placeholder-shown {
     padding: 0.75rem 1rem;
     cursor: pointer;
 }
+.flash-error {
+    animation: flash-error 0.2s ease-in-out;
+}
+@keyframes flash-error {
+    0% { background-color: #f8d7da; }
+    100% { background-color: white; }
+}
+.near-limit {
+    color: orange;
+    font-weight: bold;
+}
 @media (max-width: 480px) {
     * {
       /* background-color: blue; */
