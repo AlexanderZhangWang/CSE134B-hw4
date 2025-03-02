@@ -39,14 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         addError("comments", "User exceeded max length");
     }
   });
-  commentsField.addEventListener("input", () => {
-    const found = form_errors.find(
-        (err) => err.field === fieldName && err.message === msg
-      );
-        if (!found) {
-            form_errors.push({ field: fieldName, message: msg });
-      }
-  });
+
 
   form.addEventListener("submit", (e) => {
     errorMessage.textContent = "";
