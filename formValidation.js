@@ -39,6 +39,11 @@ document.addEventListener("DOMContentLoaded", () => {
         addError("comments", "User exceeded max length");
     }
   });
+  commentsField.addEventListener("input", () => {
+    if (commentsField.value.trim().length < 10) {
+      addError("comments", "User's comment was too short during input.");
+    }
+  });
 
   form.addEventListener("submit", (e) => {
     errorMessage.textContent = "";
