@@ -247,6 +247,27 @@ img {
   .required-indicator {
     color: red;
   }
+  input:invalid,
+  textarea:invalid {
+    border-color: red;
+  }
+  input:valid,
+  textarea:valid {
+    border-color: green;
+  }
+  input:required,
+  textarea:required {
+    background-color: #fef0d3; 
+  }
+  input:optional,
+  textarea:optional {
+    background-color: #f7f7f7;
+  }
+input:placeholder-shown {
+    background-color: bisque;
+}
+    
+  }
   
   #contactForm input[type="text"],
   #contactForm input[type="email"],
