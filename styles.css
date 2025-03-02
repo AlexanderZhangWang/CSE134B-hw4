@@ -35,6 +35,7 @@
     padding: 0.2rem;
     border: #94A3B8 solid;
     color: #94A3B8;
+    border-radius: 5px;
 }
 #themeToggle:hover {
     background-color: #94A3B8;
