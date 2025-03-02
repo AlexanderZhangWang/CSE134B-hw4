@@ -152,57 +152,39 @@
         <section id="contact">
             <h2>Contact Me</h2>
             <details>
-                <summary>Contact infomation</summary>
-                <form action="/submit" method="post">
-                    <fieldset>
-                        <legend>Your Details</legend>
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                        <br>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                        <br>
-                        <label for="topic">Topic:</label>
-                        <input list="topics" id="topic" name="topic">
-                        <datalist id="topics">
-                            <option value="Job Opportunity">
-                            <option value="Collaboration">
-                            <option value="Question">
-                            <option value="Other"></option>
-                        </datalist>
-                        <br>
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
-                        <br>
-                        <button type="submit">Send</button>
-                    </fieldset>
-                  </form>
-                  <form action="https://httpbin.org/post" method="POST">
-                    <fieldset>
-                      <legend>Contact Me</legend>
-                
-                      <label for="name">Name:</label>
-                      <input id="name" name="name" type="text" required />
-                
-                      <br><br>
-                
-                      <label for="email">Email:</label>
-                      <input id="email" name="email" type="email" required />
-                
-                      <br><br>
-                
-                      <label for="comments">Comments:</label>
-                      <textarea id="comments" name="comments" rows="4" required></textarea>
-                
-                      <input type="hidden" name="possible_bot" value="true" />
-                
-                      <br><br>
-                
-                      <button type="submit">Submit</button>
-                    </fieldset>
-                  </form>
+              <summary>Contact information</summary>
+          
+              <form 
+                id="contactForm" 
+                action="https://httpbin.org/post" 
+                method="POST">
+                <fieldset>
+                  <legend>Contact Me</legend>
+          
+                  <label for="name">
+                    Name <span class="required-indicator" aria-hidden="true">*</span></label>
+                  <input id="name" name="name" type="text" arira-required="true" required /> 
+          
+                  <label for="email">
+                    Email <span class="required-indicator" aria-hidden="true">*</span></label>
+                  <input id="email" name="email" type="email" required aria-required="true" />
+          
+                  <label for="comments">
+                    Comments <span class="required-indicator" aria-hidden="true">*</span></label>
+                  <textarea id="comments" name="comments" rows="4" required aria-required="true"></textarea>
+          
+                  <input type="hidden" name="possible_bot" value="true" />
+          
+                  <output id="errorMessage" aria-live="polite"></output>
+                  <output id="infoMessage" aria-live="polite"></output>
+          
+                  <button type="submit">Submit</button>
+                </fieldset>
+              </form>
+          
             </details>
           </section>
+          
     </main>
 	
     <footer>
