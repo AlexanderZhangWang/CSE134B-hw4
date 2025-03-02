@@ -8,6 +8,20 @@
     padding: 0;
     margin: 0;
 }
+.light-theme {
+    --primary-bg: #fafafa;
+    --fallback-bg: #ffffff;
+  }
+  
+  .light-theme body,
+  .light-theme h1,
+  .light-theme h2,
+  .light-theme p,
+  .light-theme label,
+  .light-theme input,
+  .light-theme textarea {
+    color: #111 !important; 
+  }
 
 @font-face {
     font-family: "Monomakh";
