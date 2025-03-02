@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
   nameField.addEventListener("keypress", (e) => {
     const allowedPattern = /^[a-zA-Z'\-\s]$/;
     if (!allowedPattern.test(e.key)) {
-    //   e.preventDefault();
-      showTemporaryError(nameField, "Illegal character: " + char);
-      addError("name", `User typed an illegal character: '${char}'`);
+        e.preventDefault();
+        showTemporaryError(nameField, "Illegal character: " + char);
+        addError("name", `User typed an illegal character: '${char}'`);
     }
   });
 
@@ -26,17 +26,17 @@ document.addEventListener("DOMContentLoaded", () => {
     commentCountdown.textContent = remaining;
     
     if (remaining <= 20) {
-      commentCountdown.classList.add("near-limit");
+        commentCountdown.classList.add("near-limit");
     } else {
-      commentCountdown.classList.remove("near-limit");
+        commentCountdown.classList.remove("near-limit");
     }
 
     if (currentLength > max) {
-      showTemporaryError(
-        commentsField, 
-        "You exceeded max length!"
-      );
-      addError("comments", "User exceeded max length");
+        showTemporaryError(
+            commentsField, 
+            "You exceeded max length!"
+        );
+        addError("comments", "User exceeded max length");
     }
   });
 
@@ -45,10 +45,10 @@ document.addEventListener("DOMContentLoaded", () => {
     infoMessage.textContent = "";
 
     if (!form.checkValidity()) {
-      e.preventDefault(); 
-      buildCustomValidationMessages();
-      displayErrors();
-      return; 
+        e.preventDefault(); 
+        buildCustomValidationMessages();
+        displayErrors();
+        return; 
     }
 
     formErrorsField.value = JSON.stringify(form_errors);
@@ -58,26 +58,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function buildCustomValidationMessages() {
     if (!nameField.checkValidity()) {
-      addError("name", nameField.validationMessage);
+        addError("name", nameField.validationMessage);
     }
     if (!emailField.checkValidity()) {
-      addError("email", emailField.validationMessage);
+        addError("email", emailField.validationMessage);
     }
     if (!commentsField.checkValidity()) {
-      addError("comments", commentsField.validationMessage);
+        addError("comments", commentsField.validationMessage);
     }
   }
 
   function addError(fieldName, msg) {
-    form_errors.push({ field: fieldName, message: msg });
+        form_errors.push({ field: fieldName, message: msg });
   }
 
   function displayErrors() {
     if (form_errors.length > 0) {
-      let messages = form_errors.map(err => {
-        return `${err.field}: ${err.message}`;
-      });
-      errorMessage.textContent = messages.join(" | ");
+        let messages = form_errors.map(err => {
+            return `${err.field}: ${err.message}`;
+        });
+        errorMessage.textContent = messages.join(" | ");
     }
   }
 
@@ -86,8 +86,8 @@ document.addEventListener("DOMContentLoaded", () => {
     inputElem.classList.add("flash-error");
 
     setTimeout(() => {
-      errorMessage.textContent = "";
-      inputElem.classList.remove("flash-error");
+        errorMessage.textContent = "";
+        inputElem.classList.remove("flash-error");
     }, 2000);
   }
 
