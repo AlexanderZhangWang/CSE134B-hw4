@@ -227,77 +227,72 @@ img {
     gap: 1rem;
     max-width: 600px;
     margin: 2rem auto; 
-  }
+}
   
-  #contactForm fieldset {
+#contactForm fieldset {
     border: 1px solid #ccc;
     padding: 1rem;
-  }
-  #contactForm legend {
+}
+#contactForm legend {
     font-size: 1.25rem;
     margin-bottom: 1rem;
-  }
-  
-  #contactForm label {
+}
+
+#contactForm label {
     display: block;
     font-weight: 600; 
     margin-bottom: 0.25rem;
-  }
-  
-  .required-indicator {
+}
+
+.required-indicator {
     color: red;
-  }
-  input:invalid,
-  textarea:invalid {
+}
+input:invalid, textarea:invalid {
     border-color: red;
-  }
-  input:valid,
-  textarea:valid {
+}
+input:valid, textarea:valid {
     border-color: green;
-  }
-  input:required,
-  textarea:required {
+}
+input:required, textarea:required {
     background-color: #fef0d3; 
-  }
-  input:optional,
-  textarea:optional {
+}
+input:optional, textarea:optional {
     background-color: #f7f7f7;
-  }
+}
 input:placeholder-shown {
     background-color: bisque;
 }
-    
-  }
+
   
-  #contactForm input[type="text"],
-  #contactForm input[type="email"],
-  #contactForm textarea {
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
     width: 100%;
     max-width: 100%;
     padding: 0.5rem;
     margin-bottom: 0.5rem;
     box-sizing: border-box;
     color: white
-  }
+}
   
-  #contactForm output {
+#contactForm output {
     display: block; 
     font-weight: bold; 
     padding: 0.5rem 0; 
-  }
+}
   
-  #errorMessage {
+#errorMessage {
     color: red; 
-  }
-  #infoMessage {
+}
+#infoMessage {
     color: green; 
-  }
+}
   
-  #contactForm button {
+#contactForm button {
     align-self: flex-start; 
     padding: 0.75rem 1rem;
     cursor: pointer;
-  }
+}
 @media (max-width: 480px) {
     * {
       /* background-color: blue; */
