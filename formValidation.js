@@ -40,9 +40,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   commentsField.addEventListener("input", () => {
-    if (commentsField.value.trim().length < 10) {
-      addError("comments", "User's comment was too short during input.");
-    }
+    const found = form_errors.find(
+        (err) => err.field === fieldName && err.message === msg
+      );
+        if (!found) {
+            form_errors.push({ field: fieldName, message: msg });
+      }
   });
 
   form.addEventListener("submit", (e) => {
