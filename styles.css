@@ -11,17 +11,35 @@
 .light-theme {
     --primary-bg: #fafafa;
     --fallback-bg: #ffffff;
-  }
+}
   
-  .light-theme body,
-  .light-theme h1,
-  .light-theme h2,
-  .light-theme p,
-  .light-theme label,
-  .light-theme input,
-  .light-theme textarea {
+.light-theme body,
+.light-theme h1,
+.light-theme h2,
+.light-theme h3,
+.light-theme p,
+.light-theme label,
+.light-theme input,
+.light-theme em,
+.light-theme strong,
+.light-theme button,
+.light-theme a,
+.light-theme summary,
+.light-theme legend,
+.light-theme div,
+.light-theme textarea {
     color: #111 !important; 
-  }
+}
+#themeToggle {
+    height: 1.5rem;
+    padding: 0.2rem;
+    border: #94A3B8 solid;
+    color: #94A3B8;
+}
+#themeToggle:hover {
+    background-color: #94A3B8;
+    color: #E2E8F0;
+}
 
 @font-face {
     font-family: "Monomakh";

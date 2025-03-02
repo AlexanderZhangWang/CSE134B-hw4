@@ -91,7 +91,8 @@ document.addEventListener("DOMContentLoaded", () => {
         inputElem.classList.remove("flash-error");
     }, 2000);
   }
-  document.addEventListener("DOMContentLoaded", () => {
+});
+document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
     const toggleBtn = document.getElementById("themeToggle");
   
@@ -113,5 +114,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
-
-});
