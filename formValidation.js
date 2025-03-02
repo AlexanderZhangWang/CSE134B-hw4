@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const allowedPattern = /^[a-zA-Z'\-\s]$/;
     if (!allowedPattern.test(e.key)) {
         e.preventDefault();
-        showTemporaryError(nameField, "Illegal character: " + char);
-        addError("name", `User typed an illegal character: '${char}'`);
+        showTemporaryError(nameField, "Illegal character: " + e.key);
+        addError("name", `User typed an illegal character: '${e.key}'`);
     }
   });
 
