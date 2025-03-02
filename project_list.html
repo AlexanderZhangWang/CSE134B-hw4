@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="styles.css">
+
+
+<head>
+	<meta charset="utf-8">
+	<title>Project List</title>
+</head>
+
+<body>
+    <header>
+        <h1>Project List</h1>
+    </header>
+
+    <section id="search">
+        <h2>Search</h2>
+        <div role="search">
+            <form action="/search">
+              <input type="search" name="name">
+              <button>Search Projects</button>
+            </form>
+          </div>
+    </section>
+    
+    <label for="skill-filter">Filter Skills:</label>
+    <select id="skill-filter">
+        <optgroup label="Languages">
+        <option>Java</option>
+        <option>Python</option>
+        </optgroup>
+        <optgroup label="Frameworks">
+        <option>React</option>
+        <option>Next.js</option>
+        </optgroup>
+    </select>
+  
+    <main>
+        <noscript>This browser does not support Javascript</noscript>
+        
+        
+        <h2>Projects</h2>
+        
+        <div>
+            <ol class="project_list">
+                <li>
+                    <header>December 2023 - March 2024</header>
+                    <div>
+                        <h3>
+                            <span>
+                                Successorator 
+                            </span>
+                        </h3>
+                        <p>
+                            Led a team of six to develop Success List, an Android task management app, leveraging Java, XML, and SQLite for seamless UI
+                            design and efficient persistent data storage.                            </p>
+                        <ul>
+                            <li>Java</li>
+                            <li>Android Studio</li> 
+                        </ul>
+                        <figure>
+                            <picture>
+                                <source media="(min-width: 800px)" srcset="images/successorator_m.png">
+                                <source media="(min-width: 400px)" srcset="images/successorator_s.png">
+                                <img src="images/images/successorator_l.png" alt="Project Screenshot">
+                            </picture>
+                            <figcaption>Successorator App</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li>
+                    <header>September 2023 - December 2023</header>
+                    <div>
+                        <h3>
+                            Vymsical Music Guessing Game
+                        </h3>
+                        <p>
+                            Collaborated in a team of four to develop Vymsical, an interactive music quiz game using Next.js, where players identify songs from
+                            50 tracks, scoring based on response time.
+                        </p>
+                        <ul>
+                                <li>Vercel</li>
+                                <li>Next.js</li>
+                        </ul>
+                        <figure>
+                            <picture>
+                                <source media="(min-width: 800px)" srcset="images/vymsical_proj_m.png">
+                                <source media="(min-width: 400px)" srcset="images/vymsical_proj_s.png">
+                                <img src="images/vymsical_proj_l.png" alt="Project Screenshot">
+                            </picture>
+                            <figcaption>Vymsical Music Guessing Game</figcaption>
+                        </figure>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        
+    </main>
+	
+    <footer>
+        <address>
+            Contact: <a href="mailto:alexanderzhangwang@hotmail.com">alexanderzhangwang@hotmail.com</a><br>
+            San Diego, CA
+        </address>
+    </footer>
+</body>
+
+</html>
